@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>通用 LPC 精灵图表生成器</title>
+  </head>
+  <body>
+    <section id="header-left" class="sticky">
+      <div
+        id="language-toggle"
+        class="language-toggle"
+        role="group"
+        aria-label="语言"
+      >
+        <button
+          type="button"
+          class="language-toggle__btn is-active"
+          data-locale="zh"
+          aria-pressed="true"
+        >
+          中文
+        </button>
+        <button
+          type="button"
+          class="language-toggle__btn"
+          data-locale="en"
+          aria-pressed="false"
+        >
+          EN
+        </button>
+      </div>
+      <div
+        class="is-flex is-align-items-center is-flex-wrap-wrap header-copy"
+        style="gap: 1rem"
+      >
+        <h1 class="title is-4 mb-0">
+          <span data-i18n="header.title">通用 LPC 精灵图表生成器</span>
+          <a
+            href="https://github.com/liberatedpixelcup/Universal-LPC-Spritesheet-Character-Generator"
+            class="ml-2"
+          >
+            <img
+              src="sources/github-mark.png"
+              data-i18n-alt="header.githubAlt"
+              alt="在 GitHub 上查看"
+              style="width: 24px; height: 24px; vertical-align: middle"
+            />
+          </a>
+        </h1>
+        <span class="subtitle is-6 mb-0 has-text-grey">
+          <span data-i18n="header.free">免费/自由像素画，来自 </span
+          ><a href="https://lpc.opengameart.org">Liberated Pixel Cup</a>
+          <span class="mx-2">|</span>
+          <span data-i18n="header.mustCredit">使用时必须</span
+          ><a href="#credits-section" data-i18n="header.creditAuthors"
+            >为作者署名</a
+          >
+        </span>
+        <span id="sponsors-links" class="subtitle is-6 mb-0">
+          <a href="https://www.netlify.com/" data-i18n="header.netlify"
+            >站点预览由 Netlify 提供</a
+          >
+          <span class="mx-2">|</span>
+          <a
+            href="https://argos-ci.com?utm_source=LiberatedPixelCup&utm_campaign=oss"
+            data-i18n="header.argos"
+            >视觉测试由 Argos 提供</a
+          >
+        </span>
+      </div>
+    </section>
+
+    <div id="columns-container" class="columns is-desktop">
+      <div id="chooser-column" class="column">
+        <div id="mithril-filters">
+          <div class="box loading-shell-filters">
+            <div class="category-tree-loading-host">
+              <span
+                class="loading"
+                data-i18n-aria="shell.loadingFilters"
+                aria-label="正在加载筛选"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="preview-column" class="column">
+        <div id="mithril-preview">
+          <div class="box loading-shell-animation">
+            <span
+              class="loading"
+              data-i18n-aria="shell.loadingAnimation"
+              aria-label="正在加载动画预览"
+            ></span>
+          </div>
+        </div>
+        <div id="mithril-spritesheet-preview">
+          <div class="box loading-shell-spritesheet">
+            <span
+              class="loading"
+              data-i18n-aria="shell.loadingSpritesheet"
+              aria-label="正在加载精灵图预览"
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="sources/main.ts"></script>
+  </body>
+</html>
